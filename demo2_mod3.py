@@ -4,7 +4,7 @@ from selenium.webdriver.firefox.options import Options
 import time
 
 ffOptions = Options()
-#ffOptions.add_argument("--kiosk")
+ffOptions.add_argument("--kiosk")
 
 driver = webdriver.Firefox(options=ffOptions)
 driver.get("https://www.python.org")
@@ -22,4 +22,4 @@ ele_sublink = driver.find_element_by_partial_link_text("archive of python")
 ele_sublink.click()
 
 time.sleep(5)
-#driver.quit()
+driver.quit()
